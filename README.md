@@ -1,5 +1,11 @@
 # Raspwake
 
+[![GitHub issues](https://img.shields.io/github/issues/kwiky/raspwake.svg)](https://github.com/kwiky/raspwake/issues)
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/r/kwiky/raspwake)
+[![Docker Automated buil](https://img.shields.io/docker/automated/kwiky/raspwake.svg)]()
+[![GitHub release](https://img.shields.io/github/tag/kwiky/raspwake.svg)]()
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is just a simple node script that grabs public and private ips addresses and send it to an email address.
 
 ## Environment variables
@@ -23,11 +29,18 @@ RECIPIENT=[YOUR_EMAIL_ADDRESS] node .
 ```
 
 ### Run with docker
-Build docker image from sources
+Run online docker image with environment variables
+```
+docker run -e GMAIL_ADDRESS=[A_GMAIL_ADDRESS] \
+-e GMAIL_PASSWORD=[A_GMAIL_PASSWORD] \
+-e RECIPIENT=[YOUR_EMAIL_ADDRESS] kwiky/raspwake
+```
+
+or build docker image from sources
 ```
 docker build -t raspwake .
 ```
-and run with environment variables
+and then run with environment variables
 ```
 docker run -e GMAIL_ADDRESS=[A_GMAIL_ADDRESS] \
 -e GMAIL_PASSWORD=[A_GMAIL_PASSWORD] \
