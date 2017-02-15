@@ -1,0 +1,16 @@
+{
+  "name": "raspwake",
+  "version": "0.1.0",
+  "description": "Raspberry send you an email when is wakeup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Grosbois <steve@grosbois.fr>",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "3.1.0",
+    "public-ip": "2.3.3",
+    "rxjs": "5.1.1"
+  }
+}
